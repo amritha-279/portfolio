@@ -1,0 +1,171 @@
+.education-page {
+  padding-bottom: 4rem;
+}
+
+.text-center {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+/* Timeline Container */
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* The vertical line */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 40px; /* Aligned to the left for standard vertical timeline */
+  width: 4px;
+  background: linear-gradient(to bottom, var(--accent) 0%, transparent 100%);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  padding-left: 100px;
+  margin-bottom: 4rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Marker / Icon */
+.timeline-marker {
+  position: absolute;
+  left: 17px;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background: var(--nav-bg);
+  border: 3px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+  color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+  background: var(--accent);
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
+}
+
+.graduation-cap-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Content Card */
+.timeline-content {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--nav-border);
+  border-radius: 16px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.edu-year {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(102, 126, 234, 0.1);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.edu-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.edu-institute {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Badges for Score */
+.edu-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--nav-bg);
+  border: 1px solid var(--nav-border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.badge-label {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.badge-value {
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+  }
+  
+  .timeline-marker {
+    left: -3px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .timeline-item {
+    padding-left: 60px;
+    margin-bottom: 3rem;
+  }
+  
+  .timeline-content {
+    padding: 1.5rem;
+  }
+  
+  .edu-title {
+    font-size: 1.25rem;
+  }
+  
+  .graduation-cap-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
