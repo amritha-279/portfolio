@@ -33,7 +33,7 @@ function Home() {
     return () => clearTimeout(timer);
   }, [currentRole, isDeleting, roleIndex]);
 
-  const nameLetters = "Hi, I'm Amritha R".split('');
+  const nameText = "Hi, I'm Amritha R";
 
   return (
     <div className="home">
@@ -42,13 +42,19 @@ function Home() {
           <span className="hero-subtitle">Welcome to my portfolio</span>
           
           <h1 className="hero-title">
-            {nameLetters.map((char, index) => (
-              <span 
-                key={index} 
-                className="letter-animate" 
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                {char === ' ' ? '\u00A0' : char}
+            {nameText.split(' ').map((word, wordIndex) => (
+              <span key={wordIndex} className="word-wrapper" style={{ display: 'inline-block', whiteSpace: 'nowrap' }}>
+                {word.split('').map((char, charIndex) => (
+                  <span 
+                    key={charIndex} 
+                    className="letter-animate" 
+                    style={{ animationDelay: `${(wordIndex * 5 + charIndex) * 0.05}s` }}
+                  >
+                    {char}
+                  </span>
+                ))}
+                {/* Add a space after each word except the last one */}
+                {wordIndex !== nameText.split(' ').length - 1 && <span className="space">&nbsp;</span>}
               </span>
             ))}
           </h1>
