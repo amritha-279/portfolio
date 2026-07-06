@@ -5,6 +5,7 @@ import trexaImg from '../assests/trexa.jpg'
 import natyalayaImg from '../assests/natyalaya.jpeg'
 import cinetrackerImg from '../assests/cinetracker.jpg'
 import parkmateImg from '../assests/parkmate.png'
+import subsidyguardImg from '../assests/subsidy.jpg'
 
 function Projects() {
   const projects = [
@@ -47,6 +48,14 @@ function Projects() {
       tags: ['React', 'Node.js', 'Express.js', 'MongoDB'],
       link: 'https://github.com/amritha-279/parkmate_frontend',
       image: parkmateImg
+    },
+    {
+      id: 6,
+      title: 'SubsidyGuard',
+      description: 'A government-grade fertilizer subsidy fraud detection system that verifies fertilizer purchases at retail shops in real-time to prevent misuse and black market diversion of subsidized fertilizers.',
+      tags: ['React', 'Node.js', 'Express', 'MongoDB'],
+      link: 'https://github.com/amritha-279',
+      image: subsidyguardImg
     }
   ]
 
