@@ -54,7 +54,7 @@ function Projects() {
       title: 'SubsidyGuard',
       description: 'A government-grade fertilizer subsidy fraud detection system that verifies fertilizer purchases at retail shops in real-time to prevent misuse and black market diversion of subsidized fertilizers.',
       tags: ['React', 'Node.js', 'Express', 'MongoDB'],
-      link: 'https://github.com/amritha-279',
+      link: 'https://github.com/amritha-279/SubsidyGuard',
       image: subsidyguardImg
     }
   ]
